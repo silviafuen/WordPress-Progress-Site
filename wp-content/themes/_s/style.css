@@ -20,9 +20,34 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
-#page {
-	width: 60%;
+/*--------------------------------------------------------------
+# Structure
+--------------------------------------------------------------*/
+
+.full {
+
+}
+.main-page{
+	max-width: 1040px;
+
 	margin: 0 auto;
+}
+.inner{
+	padding: 2%;
+}
+.header-area {
+
+}
+#primary{
+	float: left;
+	padding-right: 2%;
+	background-color: #707070;
+	width: 70%;
+}
+#secondary{
+	background-color: #baf2d4;
+	float: left;
+	width: 30%;
 }
 
 /*--------------------------------------------------------------
@@ -569,14 +594,6 @@ a:hover, a:active {
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: block;
-	}
-}
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -856,4 +873,25 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+/*--------------------------------------------------------------
+## Responsive
+--------------------------------------------------------------*/
+
+@media screen and (min-width: 40em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+
+}
+@media screen and (max-width: 800px) {
+	#primary,
+	#secondary{
+		float: none;
+		padding: 0;
+		width: 100%;
+	}
 }
